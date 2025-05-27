@@ -31,8 +31,15 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-6 relative">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop&crop=center" 
+            alt="Medieval manuscript illustration" 
+            className="w-full h-full object-cover opacity-10"
+          />
+        </div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 
             className={`text-5xl md:text-7xl font-bold mb-8 transition-all duration-1000 transform ${
               isVisible 
@@ -91,12 +98,69 @@ const Index = () => {
                   </p>
                 </div>
               </div>
-              <div className="bg-gray-100 rounded-lg p-8 text-center">
-                <div className="text-6xl mb-4">📚</div>
-                <h4 className="text-xl font-semibold mb-4 text-black">Comprehensive Research</h4>
-                <p className="text-gray-600">
-                  Access detailed historical records, scientific studies, and expert analyses 
-                  about the Bubonic Plague and its impact on medieval society.
+              <div className="space-y-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=300&fit=crop&crop=center" 
+                  alt="Medieval plague doctor mask" 
+                  className="w-full h-64 object-cover rounded-lg shadow-md"
+                />
+                <div className="bg-gray-100 rounded-lg p-6 text-center">
+                  <div className="text-4xl mb-3">⚕️</div>
+                  <h4 className="text-lg font-semibold mb-2 text-black">Historical Medicine</h4>
+                  <p className="text-gray-600 text-sm">
+                    Learn about medieval medical practices and the evolution of plague treatment
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Historical Images Gallery */}
+      <section className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold mb-4 text-black">Historical Context</h3>
+            <p className="text-gray-600 text-lg">Visual documentation from the medieval period</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&h=250&fit=crop&crop=center" 
+                alt="Medieval manuscript" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h4 className="text-lg font-semibold mb-2 text-black">Medieval Manuscripts</h4>
+                <p className="text-gray-600 text-sm">
+                  Historical documents and illuminated texts from the plague era
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1520637836862-4d197d17c699?w=400&h=250&fit=crop&crop=center" 
+                alt="Ancient medicine" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h4 className="text-lg font-semibold mb-2 text-black">Medical Practices</h4>
+                <p className="text-gray-600 text-sm">
+                  Traditional remedies and medical understanding of the time
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=250&fit=crop&crop=center" 
+                alt="Medieval city" 
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h4 className="text-lg font-semibold mb-2 text-black">Urban Impact</h4>
+                <p className="text-gray-600 text-sm">
+                  How the plague affected medieval cities and daily life
                 </p>
               </div>
             </div>
@@ -105,7 +169,7 @@ const Index = () => {
       </section>
 
       {/* Features Preview */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4 text-black">Coming Soon</h3>
