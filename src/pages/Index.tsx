@@ -1,12 +1,17 @@
+
 import { useEffect, useState } from 'react';
+
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     // Trigger animations after component mounts
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
-  return <div className="min-h-screen bg-white text-black">
+
+  return (
+    <div className="min-h-screen bg-white text-black">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -26,8 +31,17 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-6 relative">
+        {/* Background Image with 50% Transparency */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-50"
+          style={{
+            backgroundImage: 'url(/lovable-uploads/e33573eb-6671-4e78-8500-e7e6dc1f34af.png)'
+          }}
+        ></div>
+        
+        {/* Content */}
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className={`text-5xl md:text-6xl font-bold mb-6 text-black transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             The Bubonic Plague
           </h1>
@@ -79,6 +93,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
