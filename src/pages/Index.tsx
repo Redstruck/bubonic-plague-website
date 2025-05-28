@@ -1,17 +1,12 @@
-
 import { useEffect, useState } from 'react';
-
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     // Trigger animations after component mounts
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+  return <div className="min-h-screen bg-gray-50 text-gray-900">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -20,11 +15,11 @@ const Index = () => {
               NewsToday
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">World</a>
-              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Politics</a>
-              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Technology</a>
-              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Health</a>
-              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Sports</a>
+              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Home</a>
+              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">History</a>
+              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Timeline</a>
+              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Impact</a>
+              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Resources</a>
             </div>
           </nav>
         </div>
@@ -60,11 +55,7 @@ const Index = () => {
           </div>
 
           <div className="prose prose-lg max-w-none">
-            <img 
-              src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=400&fit=crop&crop=center" 
-              alt="News imagery" 
-              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg mb-8"
-            />
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=400&fit=crop&crop=center" alt="News imagery" className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg mb-8" />
             
             <div className="text-gray-800 leading-relaxed space-y-6">
               <p className="text-xl text-gray-700 font-medium mb-6">
@@ -114,8 +105,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
