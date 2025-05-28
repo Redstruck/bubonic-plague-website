@@ -1,17 +1,12 @@
-
 import { useEffect, useState } from 'react';
-
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     // Trigger animations after component mounts
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-white text-black">
+  return <div className="min-h-screen bg-white text-black">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -54,7 +49,7 @@ const Index = () => {
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className={`transition-all duration-1000 delay-700 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-            <h2 className="text-3xl font-bold mb-8 text-black text-center">
+            <h2 className="font-bold mb-8 text-black text-center text-4xl">
               A Defining Moment in Human History
             </h2>
             <div className="space-y-6 text-gray-700 leading-relaxed">
@@ -84,8 +79,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
