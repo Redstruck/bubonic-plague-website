@@ -1,17 +1,12 @@
-
 import { useEffect, useState } from 'react';
-
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     // Trigger animations after component mounts
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-white text-black">
+  return <div className="min-h-screen bg-white text-black">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -33,49 +28,23 @@ const Index = () => {
       {/* Hero Section */}
       <section className="py-20 px-6 relative">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop&crop=center" 
-            alt="Medieval manuscript illustration" 
-            className="w-full h-full object-cover opacity-10"
-          />
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=600&fit=crop&crop=center" alt="Medieval manuscript illustration" className="w-full h-full object-cover opacity-10" />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 
-            className={`text-5xl md:text-7xl font-bold mb-8 transition-all duration-1000 transform ${
-              isVisible 
-                ? 'translate-y-0 opacity-100' 
-                : 'translate-y-12 opacity-0'
-            }`}
-          >
+          <h1 className={`text-5xl md:text-7xl font-bold mb-8 transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             The Bubonic Plague
           </h1>
-          <h2 
-            className={`text-2xl md:text-3xl text-gray-700 mb-6 transition-all duration-1000 delay-300 transform ${
-              isVisible 
-                ? 'translate-y-0 opacity-100' 
-                : 'translate-y-12 opacity-0'
-            }`}
-          >
+          <h2 className={`text-2xl md:text-3xl text-gray-700 mb-6 transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
             Understanding History's Most Devastating Pandemic
           </h2>
-          <div 
-            className={`h-1 bg-black transition-all duration-1000 delay-500 ${
-              isVisible ? 'w-24 opacity-100' : 'w-0 opacity-0'
-            } mx-auto rounded-full mb-12`}
-          ></div>
+          <div className={`h-1 bg-black transition-all duration-1000 delay-500 ${isVisible ? 'w-24 opacity-100' : 'w-0 opacity-0'} mx-auto rounded-full mb-12`}></div>
         </div>
       </section>
 
       {/* Main Content Section */}
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div 
-            className={`bg-white rounded-lg shadow-lg p-12 transition-all duration-1000 delay-700 transform ${
-              isVisible 
-                ? 'translate-y-0 opacity-100 scale-100' 
-                : 'translate-y-12 opacity-0 scale-95'
-            }`}
-          >
+          <div className={`bg-white rounded-lg shadow-lg p-12 transition-all duration-1000 delay-700 transform ${isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-12 opacity-0 scale-95'}`}>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl font-bold mb-6 text-black">
@@ -99,11 +68,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="space-y-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=300&fit=crop&crop=center" 
-                  alt="Medieval plague doctor mask" 
-                  className="w-full h-64 object-cover rounded-lg shadow-md"
-                />
+                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=300&fit=crop&crop=center" alt="Medieval plague doctor mask" className="w-full h-64 object-cover rounded-lg shadow-md" />
                 <div className="bg-gray-100 rounded-lg p-6 text-center">
                   <div className="text-4xl mb-3">⚕️</div>
                   <h4 className="text-lg font-semibold mb-2 text-black">Historical Medicine</h4>
@@ -126,11 +91,7 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&h=250&fit=crop&crop=center" 
-                alt="Medieval manuscript" 
-                className="w-full h-48 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&h=250&fit=crop&crop=center" alt="Medieval manuscript" className="w-full h-48 object-cover" />
               <div className="p-6">
                 <h4 className="text-lg font-semibold mb-2 text-black">Medieval Manuscripts</h4>
                 <p className="text-gray-600 text-sm">
@@ -139,11 +100,7 @@ const Index = () => {
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1520637836862-4d197d17c699?w=400&h=250&fit=crop&crop=center" 
-                alt="Ancient medicine" 
-                className="w-full h-48 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1520637836862-4d197d17c699?w=400&h=250&fit=crop&crop=center" alt="Ancient medicine" className="w-full h-48 object-cover" />
               <div className="p-6">
                 <h4 className="text-lg font-semibold mb-2 text-black">Medical Practices</h4>
                 <p className="text-gray-600 text-sm">
@@ -152,11 +109,7 @@ const Index = () => {
               </div>
             </div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=250&fit=crop&crop=center" 
-                alt="Medieval city" 
-                className="w-full h-48 object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=250&fit=crop&crop=center" alt="Medieval city" className="w-full h-48 object-cover" />
               <div className="p-6">
                 <h4 className="text-lg font-semibold mb-2 text-black">Urban Impact</h4>
                 <p className="text-gray-600 text-sm">
@@ -169,7 +122,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-6">
+      <footer className="text-white py-12 px-6 bg-zinc-950">
         <div className="max-w-6xl mx-auto text-center">
           <h4 className="text-2xl font-bold mb-4">The Bubonic Plague Historical Archive</h4>
           <p className="text-gray-400 mb-6">
@@ -182,8 +135,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
