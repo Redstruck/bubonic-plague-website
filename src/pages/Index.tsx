@@ -168,42 +168,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Preview */}
-      <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4 text-black">Coming Soon</h3>
-            <p className="text-gray-600 text-lg">Enhanced features and content currently in development</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white rounded-lg shadow-md border">
-              <div className="text-4xl mb-4">🗺️</div>
-              <h4 className="text-xl font-semibold mb-3 text-black">Interactive Timeline</h4>
-              <p className="text-gray-600">
-                Explore the progression of the plague through an interactive timeline 
-                showing key events and geographical spread.
-              </p>
-            </div>
-            <div className="text-center p-6 bg-white rounded-lg shadow-md border">
-              <div className="text-4xl mb-4">🔬</div>
-              <h4 className="text-xl font-semibold mb-3 text-black">Scientific Analysis</h4>
-              <p className="text-gray-600">
-                Learn about the bacterium Yersinia pestis and modern scientific 
-                understanding of plague transmission and treatment.
-              </p>
-            </div>
-            <div className="text-center p-6 bg-white rounded-lg shadow-md border">
-              <div className="text-4xl mb-4">🏛️</div>
-              <h4 className="text-xl font-semibold mb-3 text-black">Cultural Impact</h4>
-              <p className="text-gray-600">
-                Discover how the Black Death influenced art, literature, religion, 
-                and social structures throughout medieval Europe.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-6">
         <div className="max-w-6xl mx-auto text-center">
