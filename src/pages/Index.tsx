@@ -1,12 +1,17 @@
+
 import { useEffect, useState } from 'react';
+
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     // Trigger animations after component mounts
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
-  return <div className="min-h-screen bg-white text-black">
+
+  return (
+    <div className="min-h-screen bg-white text-black">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -27,27 +32,20 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className={`text-5xl md:text-6xl font-bold mb-6 text-black transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-                The Bubonic Plague
-              </h1>
-              <p className={`text-lg text-gray-700 mb-8 leading-relaxed transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-                Exploring the history, impact, and legacy of one of history's most devastating pandemics.
-              </p>
-              <div className={`flex space-x-4 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-                <button className="bg-orange-600 text-white px-6 py-3 rounded font-medium hover:bg-orange-700 transition-colors">
-                  Explore History
-                </button>
-                <button className="border border-gray-300 text-black px-6 py-3 rounded font-medium hover:bg-gray-50 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-            <div className={`transition-all duration-1000 delay-700 transform ${isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-12 opacity-0 scale-95'}`}>
-              <img alt="Deer in medieval landscape" className="w-full h-auto rounded-lg shadow-lg" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.historic-uk.com%2FHistoryUK%2FHistoryofEngland%2FThe-Black-Death%2F&psig=AOvVaw1j-ziUvK2e0a7L0_lvBKZX&ust=1748539396477000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOiWqIDXxo0DFQAAAAAdAAAAABAV" />
-            </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className={`text-5xl md:text-6xl font-bold mb-6 text-black transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+            The Bubonic Plague
+          </h1>
+          <p className={`text-lg text-gray-700 mb-8 leading-relaxed transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+            Exploring the history, impact, and legacy of one of history's most devastating pandemics.
+          </p>
+          <div className={`flex justify-center space-x-4 transition-all duration-1000 delay-500 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+            <button className="bg-orange-600 text-white px-6 py-3 rounded font-medium hover:bg-orange-700 transition-colors">
+              Explore History
+            </button>
+            <button className="border border-gray-300 text-black px-6 py-3 rounded font-medium hover:bg-gray-50 transition-colors">
+              Learn More
+            </button>
           </div>
         </div>
       </section>
@@ -55,8 +53,8 @@ const Index = () => {
       {/* Content Section */}
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <div className={`transition-all duration-1000 delay-900 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-            <h2 className="text-3xl font-bold mb-8 text-black">
+          <div className={`transition-all duration-1000 delay-700 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+            <h2 className="text-3xl font-bold mb-8 text-black text-center">
               A Defining Moment in Human History
             </h2>
             <div className="space-y-6 text-gray-700 leading-relaxed">
@@ -86,6 +84,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
