@@ -1,19 +1,13 @@
-
 import { useEffect, useState, useRef } from 'react';
-
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [articleContent, setArticleContent] = useState(
-    "In today's rapidly evolving global landscape, staying informed has never been more crucial. Our comprehensive coverage brings you the latest developments from around the world, providing in-depth analysis and breaking news as events unfold. From political shifts and economic trends to technological breakthroughs and cultural movements, we deliver the stories that matter most to our readers."
-  );
+  const [articleContent, setArticleContent] = useState("In today's rapidly evolving global landscape, staying informed has never been more crucial. Our comprehensive coverage brings you the latest developments from around the world, providing in-depth analysis and breaking news as events unfold. From political shifts and economic trends to technological breakthroughs and cultural movements, we deliver the stories that matter most to our readers.");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-
   useEffect(() => {
     // Trigger animations after component mounts
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
-
   useEffect(() => {
     // Auto-resize textarea based on content
     if (textareaRef.current) {
@@ -21,13 +15,10 @@ const Index = () => {
       textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
     }
   }, [articleContent]);
-
   const handleContentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setArticleContent(e.target.value);
   };
-
-  return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
+  return <div className="min-h-screen bg-gray-50 text-gray-900">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -76,21 +67,10 @@ const Index = () => {
           </div>
 
           <div className="prose prose-lg max-w-none">
-            <img 
-              src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=400&fit=crop&crop=center" 
-              alt="News imagery" 
-              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg mb-8"
-            />
+            <img alt="News imagery" src="https://www.historic-uk.com/wp-content/uploads/2017/06/black-death-2800x1440.jpg" className="w-full h-64 md:h-80 rounded-lg shadow-lg mb-8 object-cover" />
             
             <div className="text-gray-800 leading-relaxed">
-              <textarea
-                ref={textareaRef}
-                value={articleContent}
-                onChange={handleContentChange}
-                className="w-full text-xl text-gray-700 font-medium bg-transparent border-none resize-none outline-none overflow-hidden p-0"
-                placeholder="Enter your article content here..."
-                rows={1}
-              />
+              <textarea ref={textareaRef} value={articleContent} onChange={handleContentChange} className="w-full text-xl text-gray-700 font-medium bg-transparent border-none resize-none outline-none overflow-hidden p-0" placeholder="Enter your article content here..." rows={1} />
             </div>
           </div>
         </article>
@@ -116,8 +96,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
