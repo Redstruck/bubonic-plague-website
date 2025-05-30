@@ -52,7 +52,7 @@ const Index = () => {
             <span className="inline-block bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
               World News
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">Major Effects of The Bubonic Plague</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">Major Effects of The Bubonic Plague:</h1>
             <div className="flex items-center text-gray-600 text-sm mb-8">
               <span>By Nishad Raghuvanshi</span>
               <span className="mx-2">•</span>
