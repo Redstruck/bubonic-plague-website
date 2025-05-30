@@ -12,74 +12,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
-      {/* Hero Section */}
-      <section className="relative h-screen bg-cover bg-center bg-no-repeat" 
-               style={{ backgroundImage: `url('/lovable-uploads/b978794d-8993-42c8-9e06-a3a777e4d0dc.png')` }}>
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        
-        {/* Content overlay */}
-        <div className="relative z-10 flex flex-col justify-end h-full text-white p-8 md:p-16">
-          <div className="max-w-4xl">
-            {/* Date */}
-            <p className="text-sm font-medium mb-4 tracking-wide uppercase">
-              APR 7, 2025 5:50 AM PT
-            </p>
-            
-            {/* Main headline */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              The Return of the Dire Wolf
-            </h1>
-            
-            {/* Category tags */}
-            <div className="flex flex-wrap gap-4 mb-8">
-              <span className="border border-white px-4 py-2 text-sm font-medium uppercase tracking-wide">
-                SCIENCE
-              </span>
-              <span className="border border-white px-4 py-2 text-sm font-medium uppercase tracking-wide">
-                ANIMALS
-              </span>
-              <div className="border border-white px-3 py-2">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
-                </svg>
-              </div>
-            </div>
-            
-            {/* Author info */}
-            <div className="border-t border-white border-opacity-30 pt-6">
-              <div className="flex flex-col md:flex-row gap-6">
-                <div>
-                  <p className="text-sm font-medium mb-1">Photographs</p>
-                  <p className="text-sm">
-                    by <span className="underline">Robert Clark</span> for TIME
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm font-medium mb-1">Story</p>
-                  <p className="text-sm">
-                    by <span className="underline">Jeffrey Kluger</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Header Navigation - positioned over hero */}
-      <header className="absolute top-0 left-0 right-0 z-20 bg-transparent">
+      {/* Header */}
+      <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <nav className="flex justify-between items-center">
-            <div className="text-3xl font-bold text-white">
+            <div className="text-3xl font-bold text-red-600">
               NewsToday
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#" className="text-white hover:text-red-400 transition-colors font-medium">Home</a>
-              <a href="#" className="text-white hover:text-red-400 transition-colors font-medium">History</a>
-              <a href="#" className="text-white hover:text-red-400 transition-colors font-medium">Timeline</a>
-              <a href="#" className="text-white hover:text-red-400 transition-colors font-medium">Impact</a>
-              <a href="#" className="text-white hover:text-red-400 transition-colors font-medium">Resources</a>
+              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">World</a>
+              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Politics</a>
+              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Technology</a>
+              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Health</a>
+              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Sports</a>
             </div>
           </nav>
         </div>
@@ -98,7 +43,29 @@ const Index = () => {
       {/* Main Content */}
       <main className="max-w-4xl mx-auto py-12 px-6">
         <article className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+          <div className="mb-6">
+            <span className="inline-block bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
+              World News
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+              Global Events Shape Tomorrow's Headlines
+            </h1>
+            <div className="flex items-center text-gray-600 text-sm mb-8">
+              <span>By Sarah Johnson</span>
+              <span className="mx-2">•</span>
+              <time>March 15, 2024</time>
+              <span className="mx-2">•</span>
+              <span>5 min read</span>
+            </div>
+          </div>
+
           <div className="prose prose-lg max-w-none">
+            <img 
+              src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=400&fit=crop&crop=center" 
+              alt="News imagery" 
+              className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg mb-8"
+            />
+            
             <div className="text-gray-800 leading-relaxed space-y-6">
               <p className="text-xl text-gray-700 font-medium mb-6">
                 In today's rapidly evolving global landscape, staying informed has never been more crucial. 
