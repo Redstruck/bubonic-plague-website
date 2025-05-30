@@ -23,9 +23,7 @@ const Index = () => {
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <nav className="flex justify-between items-center">
-            <div className="text-3xl font-bold text-red-600">
-              NewsToday
-            </div>
+            <div className="text-3xl font-bold text-red-600">NewsToday</div>
             <div className="hidden md:flex space-x-8">
               <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">World</a>
               <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Politics</a>
@@ -42,7 +40,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center">
             <span className="bg-white text-red-600 px-3 py-1 text-sm font-bold rounded mr-4">BREAKING</span>
-            <span className="text-sm">Latest updates from around the world • Stay informed with our comprehensive coverage</span>
+            <span className="text-sm">Latest updates from around the world • Stay informed with our comprehensive news coverage</span>
           </div>
         </div>
       </div>
@@ -54,13 +52,11 @@ const Index = () => {
             <span className="inline-block bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
               World News
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-              Global Events Shape Tomorrow's Headlines
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">Major Effects of The Bubonic Plague</h1>
             <div className="flex items-center text-gray-600 text-sm mb-8">
-              <span>By Sarah Johnson</span>
+              <span>By Nishad Raghuvanshi</span>
               <span className="mx-2">•</span>
-              <time>March 15, 2024</time>
+              <time>March 30, 2025</time>
               <span className="mx-2">•</span>
               <span>5 min read</span>
             </div>
@@ -77,22 +73,18 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 px-6 mt-16">
+      <footer className="text-white py-8 px-6 mt-16 bg-sky-950">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h4 className="text-2xl font-bold text-red-500 mb-4">NewsToday</h4>
-            <p className="text-gray-400 mb-6">
-              Your trusted source for breaking news and in-depth analysis
-            </p>
+            <h4 className="text-2xl font-bold mb-4 text-red-50">NewsToday</h4>
+            <p className="mb-6 text-gray-50">Your trusted source for breaking news and in-depth analysis</p>
             <div className="flex justify-center space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">About Us</a>
+              <a href="#" className="hover:text-white transition-colors">About Me</a>
               <a href="#" className="hover:text-white transition-colors">Contact</a>
               <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
             </div>
-            <div className="mt-6 pt-6 border-t border-gray-700 text-gray-500 text-sm">
-              © 2024 NewsToday. All rights reserved.
-            </div>
+            <div className="mt-6 pt-6 border-t border-gray-700 text-gray-500 text-sm">© 2024 NewsToday. All rights reserved.</div>
           </div>
         </div>
       </footer>
