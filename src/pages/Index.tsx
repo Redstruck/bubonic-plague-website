@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [articleContent, setArticleContent] = useState(
+    "In today's rapidly evolving global landscape, staying informed has never been more crucial. Our comprehensive coverage brings you the latest developments from around the world, providing in-depth analysis and breaking news as events unfold. From political shifts and economic trends to technological breakthroughs and cultural movements, we deliver the stories that matter most to our readers."
+  );
 
   useEffect(() => {
     // Trigger animations after component mounts
@@ -66,29 +69,13 @@ const Index = () => {
               className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg mb-8"
             />
             
-            <div className="text-gray-800 leading-relaxed space-y-6">
-              <p className="text-xl text-gray-700 font-medium mb-6">
-                In today's rapidly evolving global landscape, staying informed has never been more crucial. 
-                Our comprehensive coverage brings you the latest developments from around the world.
-              </p>
-              
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
-              
-              <p>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
-                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              </p>
-              
-              <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos 
-                qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-                adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-              </p>
+            <div className="text-gray-800 leading-relaxed">
+              <textarea
+                value={articleContent}
+                onChange={(e) => setArticleContent(e.target.value)}
+                className="w-full text-xl text-gray-700 font-medium bg-transparent border-none resize-none outline-none min-h-[120px] p-0"
+                placeholder="Enter your article content here..."
+              />
             </div>
           </div>
         </article>
