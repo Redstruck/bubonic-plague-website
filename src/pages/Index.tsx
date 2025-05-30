@@ -28,7 +28,7 @@ const Index = () => {
               <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">World</a>
               <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Politics</a>
               <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Technology</a>
-              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Health</a>
+              <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">History</a>
               <a href="#" className="text-gray-700 hover:text-red-600 transition-colors font-medium">Sports</a>
             </div>
           </nav>
