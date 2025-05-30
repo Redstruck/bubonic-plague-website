@@ -1,17 +1,30 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [articleContent, setArticleContent] = useState(
     "In today's rapidly evolving global landscape, staying informed has never been more crucial. Our comprehensive coverage brings you the latest developments from around the world, providing in-depth analysis and breaking news as events unfold. From political shifts and economic trends to technological breakthroughs and cultural movements, we deliver the stories that matter most to our readers."
   );
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     // Trigger animations after component mounts
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    // Auto-resize textarea based on content
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
+      textareaRef.current.style.height = textareaRef.current.scrollHeight + 'px';
+    }
+  }, [articleContent]);
+
+  const handleContentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setArticleContent(e.target.value);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
@@ -71,10 +84,12 @@ const Index = () => {
             
             <div className="text-gray-800 leading-relaxed">
               <textarea
+                ref={textareaRef}
                 value={articleContent}
-                onChange={(e) => setArticleContent(e.target.value)}
-                className="w-full text-xl text-gray-700 font-medium bg-transparent border-none resize-none outline-none min-h-[120px] p-0"
+                onChange={handleContentChange}
+                className="w-full text-xl text-gray-700 font-medium bg-transparent border-none resize-none outline-none overflow-hidden p-0"
                 placeholder="Enter your article content here..."
+                rows={1}
               />
             </div>
           </div>
