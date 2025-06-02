@@ -14,7 +14,16 @@ Medieval European feudalism depended on a large, stable population of peasants t
 
 **Decline in the Church's Authority**
 
-The Holy Roman Church, which was one of the strongest forces in medieval Europe, failed to explain or stop the spreading of the plague. The Church's inability to provide answers or relief during the plague led to a decline in its authority. Many members of the clergy, like priests, nuns and monks, died alongside everyone else. This led people to question why God would allow such suffering, reducing their faith and trust in religious leaders. Slowly, the Church's grip and authority on Europe began to loosen.`);
+The Holy Roman Church, which was one of the strongest forces in medieval Europe, failed to explain or stop the spreading of the plague. The Church's inability to provide answers or relief during the plague led to a decline in its authority. Many members of the clergy, like priests, nuns and monks, died alongside everyone else. This led people to question why God would allow such suffering, reducing their faith and trust in religious leaders. Slowly, the Church's grip and authority on Europe began to loosen.
+
+**Cultural Impact**
+
+The endless amount of death during the Bubonic Plague greatly influenced European culture during this time period. Art and literature shifted to darker themes like death and the afterlife. Many people obsessed over the afterlife, but also began to value life on Earth more than they previously did. The plague shifted how people saw the world and themselves, laying the groundwork for the Renaissance, where art and culture in Europe flourished.
+
+**Violence Against Jewish Communities**
+
+As fear and panic spread, many looked for someone to blame. Rumors spread by Church officials and Christian extremist groups blamed Jews for poisoning wells or summoning the plague through witchcraft. Antisemitism greatly intensified during this time period, as Jews were blamed for the spreading of the Black Death. Across Europe, entire Jewish communities were brutally killed by mobs or burned at the stake. Thousands were killed or driven out.`);
+  
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
