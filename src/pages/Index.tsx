@@ -1,9 +1,20 @@
-
 import { useEffect, useState, useRef } from 'react';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [articleContent, setArticleContent] = useState("Between 1347 and 1351, the Bubonic Plague, also known as the Black Death ravaged Europe, killing an estimated 25 million people. In its aftermath, Europe went through many huge and monumental changes that would greatly shape its future. Below are the most notable ones.");
+  const [articleContent, setArticleContent] = useState(`Between 1347 and 1351, the Bubonic Plague, also known as the Black Death ravaged Europe, killing an estimated 25 million people. In its aftermath, Europe went through many huge and monumental changes that would greatly shape its future. Below are the most notable ones.
+
+**Labor Shortages and the Rise of the Working Class**
+
+With so many people dead due to the plague, workers became scarce. Surviving peasants and artisans gained newfound leverage, allowing them to ask for higher wages and better living conditions due to increased demand for their skills. Some moved to cities where work was available. This shift gave rise to a new, more independent working class. Economic power started to spread downward, away from the upper class members of the feudal system, like the nobles, lords, and the clergy. This newfound economic power allowed many to improve their living standards and challenge traditional social norms.
+
+**The Collapse of the Feudal System**
+
+Medieval European feudalism depended on a large, stable population of peasants to farm land and serve nobles. When the plague killed nearly half of Europe's people, this system collapsed almost instantly. Lords and nobles lost control as peasants either died or demanded better treatment. Without enough workers to support it, feudalism began to fall apart. Peasants and serfs, now in higher demand, found themselves in a position to demand better wages and working conditions. Landowners, facing this challenge to maintain their estates, had to comply. Gradually, this led to the distanling of the once rigid feudal hierarchy ruling Medieval europe.
+
+**Decline in the Church's Authority**
+
+The Holy Roman Church, which was one of the strongest forces in medieval Europe, failed to explain or stop the spreading of the plague. The Church's inability to provide answers or relief during the plague led to a decline in its authority. Many members of the clergy, like priests, nuns and monks, died alongside everyone else. This led people to question why God would allow such suffering, reducing their faith and trust in religious leaders. Slowly, the Church's grip and authority on Europe began to loosen.`);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
