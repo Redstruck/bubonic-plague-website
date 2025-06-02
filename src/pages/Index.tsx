@@ -4,23 +4,23 @@ const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [articleContent, setArticleContent] = useState(`Between 1347 and 1351, the Bubonic Plague, also known as the Black Death ravaged Europe, killing an estimated 25 million people. In its aftermath, Europe went through many huge and monumental changes that would greatly shape its future. Below are the most notable ones.
 
-**Labor Shortages and the Rise of the Working Class**
+<h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Labor Shortages and the Rise of the Working Class</h2>
 
 With so many people dead due to the plague, workers became scarce. Surviving peasants and artisans gained newfound leverage, allowing them to ask for higher wages and better living conditions due to increased demand for their skills. Some moved to cities where work was available. This shift gave rise to a new, more independent working class. Economic power started to spread downward, away from the upper class members of the feudal system, like the nobles, lords, and the clergy. This newfound economic power allowed many to improve their living standards and challenge traditional social norms.
 
-**The Collapse of the Feudal System**
+<h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">The Collapse of the Feudal System</h2>
 
 Medieval European feudalism depended on a large, stable population of peasants to farm land and serve nobles. When the plague killed nearly half of Europe's people, this system collapsed almost instantly. Lords and nobles lost control as peasants either died or demanded better treatment. Without enough workers to support it, feudalism began to fall apart. Peasants and serfs, now in higher demand, found themselves in a position to demand better wages and working conditions. Landowners, facing this challenge to maintain their estates, had to comply. Gradually, this led to the distanling of the once rigid feudal hierarchy ruling Medieval europe.
 
-**Decline in the Church's Authority**
+<h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Decline in the Church's Authority</h2>
 
 The Holy Roman Church, which was one of the strongest forces in medieval Europe, failed to explain or stop the spreading of the plague. The Church's inability to provide answers or relief during the plague led to a decline in its authority. Many members of the clergy, like priests, nuns and monks, died alongside everyone else. This led people to question why God would allow such suffering, reducing their faith and trust in religious leaders. Slowly, the Church's grip and authority on Europe began to loosen.
 
-**Cultural Impact**
+<h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Cultural Impact</h2>
 
 The endless amount of death during the Bubonic Plague greatly influenced European culture during this time period. Art and literature shifted to darker themes like death and the afterlife. Many people obsessed over the afterlife, but also began to value life on Earth more than they previously did. The plague shifted how people saw the world and themselves, laying the groundwork for the Renaissance, where art and culture in Europe flourished.
 
-**Violence Against Jewish Communities**
+<h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Violence Against Jewish Communities</h2>
 
 As fear and panic spread, many looked for someone to blame. Rumors spread by Church officials and Christian extremist groups blamed Jews for poisoning wells or summoning the plague through witchcraft. Antisemitism greatly intensified during this time period, as Jews were blamed for the spreading of the Black Death. Across Europe, entire Jewish communities were brutally killed by mobs or burned at the stake. Thousands were killed or driven out.`);
   
@@ -93,14 +93,9 @@ As fear and panic spread, many looked for someone to blame. Rumors spread by Chu
             <img alt="News imagery" src="https://www.historic-uk.com/wp-content/uploads/2017/06/black-death-2800x1440.jpg" className="w-full h-64 md:h-80 rounded-lg shadow-lg mb-8 object-cover" />
             
             <div className="text-gray-800 leading-relaxed">
-              <textarea 
-                ref={textareaRef} 
-                value={articleContent} 
-                onChange={handleContentChange} 
-                className="w-full text-xl text-gray-700 font-medium bg-transparent border-none resize-none outline-none overflow-hidden p-0" 
-                placeholder="Enter your article content here..." 
-                rows={1} 
-                readOnly 
+              <div 
+                className="text-xl text-gray-700 font-medium" 
+                dangerouslySetInnerHTML={{ __html: articleContent }}
               />
             </div>
           </div>
