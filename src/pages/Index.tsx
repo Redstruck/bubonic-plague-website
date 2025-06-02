@@ -1,8 +1,9 @@
+
 import { useEffect, useState, useRef } from 'react';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [articleContent, setArticleContent] = useState("In today's rapidly evolving global landscape, staying informed has never been more crucial. Our comprehensive coverage brings you the latest developments from around the world, providing in-depth analysis and breaking news as events unfold. From political shifts and economic trends to technological breakthroughs and cultural movements, we deliver the stories that matter most to our readers.");
+  const [articleContent, setArticleContent] = useState("Between 1347 and 1351, the Bubonic Plague, also known as the Black Death ravaged Europe, killing an estimated 25 million people. In its aftermath, Europe went through many huge and monumental changes that would greatly shape its future. Below are the most notable ones.");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
