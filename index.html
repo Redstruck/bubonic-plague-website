@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,11 +8,11 @@
     <meta name="description" content="Lovable Generated Project" />
     <meta name="author" content="Lovable" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="/lovable-uploads/da82b40f-d3bc-42fa-b742-547b5442a444.png" type="image/png">
-    <link rel="icon" sizes="16x16" href="/lovable-uploads/da82b40f-d3bc-42fa-b742-547b5442a444.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="/lovable-uploads/da82b40f-d3bc-42fa-b742-547b5442a444.png" type="image/png">
-    <link rel="icon" sizes="48x48" href="/lovable-uploads/da82b40f-d3bc-42fa-b742-547b5442a444.png" type="image/png">
+    <!-- Dynamic Favicon - will be set by JavaScript -->
+    <link rel="icon" id="favicon" href="/lovable-uploads/da82b40f-d3bc-42fa-b742-547b5442a444.png" type="image/png">
+    <link rel="icon" id="favicon-16" sizes="16x16" href="/lovable-uploads/da82b40f-d3bc-42fa-b742-547b5442a444.png" type="image/png">
+    <link rel="icon" id="favicon-32" sizes="32x32" href="/lovable-uploads/da82b40f-d3bc-42fa-b742-547b5442a444.png" type="image/png">
+    <link rel="icon" id="favicon-48" sizes="48x48" href="/lovable-uploads/da82b40f-d3bc-42fa-b742-547b5442a444.png" type="image/png">
 
     <meta property="og:title" content="The Bubonic Plague" />
     <meta property="og:description" content="Lovable Generated Project" />
@@ -29,6 +30,67 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-CR1QGZB75J');
+    </script>
+
+    <!-- Dynamic Favicon Script -->
+    <script>
+      (function() {
+        // Define favicon paths
+        const lightFavicon = '/lovable-uploads/da82b40f-d3bc-42fa-b742-547b5442a444.png'; // Plague doctor (current)
+        const darkFavicon = '/lovable-uploads/d7a96549-6acd-4d92-8e04-37e139e4b96a.png'; // New light-colored image
+
+        // Function to update favicon
+        function updateFavicon(isDark) {
+          const faviconPath = isDark ? darkFavicon : lightFavicon;
+          
+          // Update all favicon link elements
+          const faviconElements = [
+            document.getElementById('favicon'),
+            document.getElementById('favicon-16'),
+            document.getElementById('favicon-32'),
+            document.getElementById('favicon-48')
+          ];
+
+          faviconElements.forEach(element => {
+            if (element) {
+              element.href = faviconPath;
+            }
+          });
+        }
+
+        // Check for dark mode preference
+        function checkDarkMode() {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            updateFavicon(true);
+          } else {
+            updateFavicon(false);
+          }
+        }
+
+        // Listen for changes in color scheme preference
+        function setupThemeListener() {
+          if (window.matchMedia) {
+            const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            // Set initial favicon
+            checkDarkMode();
+            
+            // Listen for changes
+            if (mediaQuery.addListener) {
+              mediaQuery.addListener(checkDarkMode); // For older browsers
+            } else if (mediaQuery.addEventListener) {
+              mediaQuery.addEventListener('change', checkDarkMode); // For modern browsers
+            }
+          }
+        }
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', setupThemeListener);
+        } else {
+          setupThemeListener();
+        }
+      })();
     </script>
   </head>
 
