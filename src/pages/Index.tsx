@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 
 const Index = () => {
@@ -93,27 +92,10 @@ As fear and panic spread, many looked for someone to blame. Rumors spread by Chu
           <div className="prose prose-lg max-w-none">
             <img alt="News imagery" src="https://www.historic-uk.com/wp-content/uploads/2017/06/black-death-2800x1440.jpg" className="w-full h-64 md:h-80 rounded-lg shadow-lg mb-8 object-cover" />
             
-            <div className="text-gray-800 leading-relaxed space-y-6">
+            <div className="text-gray-800 leading-relaxed">
               <div 
-                className="text-lg text-gray-700 font-medium space-y-6 text-justify"
-                style={{
-                  columnCount: 'auto',
-                  columnWidth: 'auto',
-                  textAlign: 'justify',
-                  lineHeight: '1.7'
-                }}
-                dangerouslySetInnerHTML={{ 
-                  __html: articleContent.replace(
-                    /<h2 class="([^"]*)">/g, 
-                    '<h2 class="$1 block w-full border-b border-gray-200 pb-2">'
-                  ).replace(
-                    /(<\/h2>)/g,
-                    '$1<div class="w-full h-4"></div>'
-                  ).replace(
-                    /(\w+\.)(\s+)(\w)/g,
-                    '$1$2$3'
-                  )
-                }}
+                className="text-xl text-gray-700 font-medium" 
+                dangerouslySetInnerHTML={{ __html: articleContent }}
               />
             </div>
           </div>
